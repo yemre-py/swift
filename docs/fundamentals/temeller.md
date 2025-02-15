@@ -6,7 +6,7 @@ Swift'te deðiþkenleri `let` ve `var` anahtar kelimeleriyle tanýmlarýz. `let` ile
 
 ## 1.2 Declaring Constants and Variables
 
-Sabitler ve deðiþkenler kullanýlmadan önce mutlaka tanýmlanmalýdýr. Sabitler için `let`, deðiþkenler için `var` anahtar kelimelerini kullanýlýr. Aþaðýda örnek tanýmlamalarý görebilirsin:
+Daimiler ve deðiþkenler kullanýlmadan önce mutlaka tanýmlanmalýdýr. Daimiler için `let`, deðiþkenler için `var` anahtar kelimelerini kullanýlýr. Aþaðýda örnek tanýmlamalarý görebilirsin:
 
 ```swift
 let maxNumberOfLoginAttempts = 10
@@ -16,15 +16,15 @@ var currentLoginAttempt = 0
 Bu kod þöyle okunur:
 
 ```plaintext
-maxNumberOfLoginAttempts adýnda bir sabit tanýmladýk ve deðeri 10'a eþitledik.
+maxNumberOfLoginAttempts adýnda bir Daimi tanýmladýk ve deðeri 10'a eþitledik.
 currentLoginAttempt adýnda bir deðiþken tanýmladýk ve baþlangýç deðerini 0'a eþitledik.
 ```
 
-Bu örnekte, `maxNumberOfLoginAttempts` sabit olarak tanýmladýk. Çünkü maksimum giriþ deneme sayýsý deðiþtirilmeyecek. `currentLoginAttempt` deðiþkeni ise her giriþ denemesi sonrasý artacak.
+Bu örnekte, `maxNumberOfLoginAttempts` Daimi olarak tanýmladýk. Çünkü maksimum giriþ deneme sayýsý deðiþtirilmeyecek. `currentLoginAttempt` deðiþkeni ise her giriþ denemesi sonrasý artacak.
 
-Eðer deðeri kodda hiç deðiþtirilmeyecekse sabit olarak tanýmlamak daha mantýklýdýr. Aksi takdirde deðiþken olarak tanýmlamak daha mantýklýdýr.
+Eðer deðeri kodda hiç deðiþtirilmeyecekse Daimi olarak tanýmlamak daha mantýklýdýr. Aksi takdirde deðiþken olarak tanýmlamak daha mantýklýdýr.
 
-Sabit deðer tanýmlarken, yukarýdaki örnekte olduðu gibi bir baþlangýç deðeri verebilirsin. Alternatif olarak, bu deðeri sonradan da verebilirsin.
+Daimi deðer tanýmlarken, yukarýdaki örnekte olduðu gibi bir baþlangýç deðeri verebilirsin. Alternatif olarak, bu deðeri sonradan da verebilirsin.
 
 ```swift
 var surface = "moon"
@@ -33,14 +33,55 @@ let gravity: Float
 
 if surface == "earth" {
     gravity = 9.81
+} else if surface == "mars" {
+    gravity = 3.71
 } else {
     gravity = 1.62
 }
 // þuan gravity deðiþkenine deðer atandý ve okunabilir hale geldi.
 ```
 
-Bu kod þöyle okunur:
+Bu örnekte, gravity deðiþkeni bir Daimitir ve surface deðiþkenine baðýmlýdýr. `if` koþulu ile gravity deðiþkenine daimi bir deðer atanýr.
+
+Tek satýrda birden fazla deðiþken tanýmlanabilir.
+
+```swift
+let red = 0, blue = 0, green = 0
+```
+
+## 1.3 Type Annotations
+
+Daimi ve deðiþkenlerin hangi tipte olduðunu belirtmek için `type annotation` kullanýlýr. Daiminin ya da deðiþkenin adýnýn ardýndan `:` iþareti ve tipi yazýlýr.
+
+```swift
+var welcomeMessage: String
+```
 
 ```plaintext
-
+Türü String olan welcomeMessage adýnda bir deðiþken tanýmla.
 ```
+
+Tek satýrda birden fazla deðiþkeni ayný þekilde tanýmlayabilirsin.
+
+```swift
+var red, blue, green: Float
+```
+
+## 1.4 Naming Constants and Variables
+
+Deðiþken ve daimiler neredeyse her karakteri içerebilir, UNICODE karakterler de buraya dahildir.
+
+```swift
+let ? = 3.14159
+let ?? = "????"
+let ???? = "dogcow"
+```
+
+Daimiler ve deðiþkenlerin isimleri
+
+- boþluk içeremez
+- matematiksel semboller içeremez
+- oklar içeremez
+- güizli Unicode karakterler içeremez
+- çizgi ya da kutu-çizgiler içeremez
+- sayý ile baþlayamaz
