@@ -22,7 +22,12 @@ var locationX = 0.0, locationY = 0.0
 
 let red = 0, green = 128, blue = 255
 
-print(red, green, blue)
+let x, y, z : Double
+
+let `for` = 10
+
+let language: String = "swift"
+language = "Objective-C"
 
 
 

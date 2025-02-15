@@ -85,3 +85,37 @@ Daimiler ve deðiþkenlerin isimleri
 - güizli Unicode karakterler içeremez
 - çizgi ya da kutu-çizgiler içeremez
 - sayý ile baþlayamaz
+
+Bir türde bir deðiþken tanýmladýktan sonra, ayný isimde baþka bir deðiþken tanýmlayamazsýn veya farklý bir türde baþka bir deðiþken tanýmlayamazsýn. Bir daimiyi deðiþkene, deðiþkeni daimiye çeviremezsin.
+
+> **Not**
+>
+> Eðer Swift'te keyword olarak kullanýlan bir isim kullanmak istersen, isminizi `backticks` içine alýn.
+>
+> ```swift
+> let `if` = "if"
+> ```
+
+Deðiþkenlerin deðerini baþlangýç tipine uygun olarak deðiþtirebilirsin.
+
+```swift
+var friendlyWelcome = "Hello!"
+friendlyWelcome = "Bonjour!"
+// friendlyWelcome artýk "Bonjour!" deðerini taþýr.
+```
+
+Daimilerin deðerini deðiþtiremezsin.
+
+```swift
+let languageName = "Swift"
+languageName = "Swift++"
+// Cannot assign to value: 'language' is a 'let' constant
+```
+
+## 1.5 Printing Constants and Variables
+
+Daimiler ve deðiþkenlerin deðerini ekrana yazdýrmak için `print(_:separator:terminator:)` fonksiyonunu kullanýrýz.
+
+```swift
+print(friendlyWelcome)
+```
